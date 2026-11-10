@@ -21,7 +21,7 @@ This repository contains the connection settings, the Claude Code and Cursor plu
 ## Server URL
 
 ```
-https://mcp.trenz.ai/mcp/oauth
+https://mcp.trenz.ai/mcp/oauth?src=github
 ```
 
 Remote MCP over streamable HTTP. You sign in with your trenz.ai account the first time you connect; there is no API key.
@@ -46,7 +46,7 @@ Install the plugin. It adds the Trenz MCP server and the Trenz skill:
 Or add only the MCP server:
 
 ```bash
-claude mcp add --transport http trenz https://mcp.trenz.ai/mcp/oauth
+claude mcp add --transport http trenz https://mcp.trenz.ai/mcp/oauth?src=github
 ```
 
 Then run `/mcp`, select **trenz**, choose **Authenticate**, sign in to trenz.ai if asked and click **Allow**.
@@ -61,7 +61,7 @@ Or add this to `~/.cursor/mcp.json` (merge it with any servers already there):
 {
   "mcpServers": {
     "trenz": {
-      "url": "https://mcp.trenz.ai/mcp/oauth"
+      "url": "https://mcp.trenz.ai/mcp/oauth?src=github"
     }
   }
 }
@@ -72,7 +72,7 @@ Then open **Cursor Settings** → **MCP**, click **Login** next to trenz, sign i
 ### Codex
 
 ```bash
-codex mcp add trenz --url https://mcp.trenz.ai/mcp/oauth
+codex mcp add trenz --url https://mcp.trenz.ai/mcp/oauth?src=github
 ```
 
 A trenz.ai page opens; sign in if asked and click **Allow**. If the browser doesn't open, run `codex mcp login trenz`.
@@ -87,11 +87,11 @@ The first time Gemini uses Trenz, a trenz.ai page opens; sign in if asked and cl
 
 ### Claude (web, desktop, mobile)
 
-**Settings** → **Connectors** → **Add custom connector**. Name `Trenz`, URL `https://mcp.trenz.ai/mcp/oauth`, click **Add**, then **Connect** and **Allow** on trenz.ai. On Claude Team and Enterprise, an Owner adds the connector first in **Organization settings** → **Connectors**.
+**Settings** → **Connectors** → **Add custom connector**. Name `Trenz`, URL `https://mcp.trenz.ai/mcp/oauth?src=github`, click **Add**, then **Connect** and **Allow** on trenz.ai. On Claude Team and Enterprise, an Owner adds the connector first in **Organization settings** → **Connectors**.
 
 ### ChatGPT
 
-On chatgpt.com in a browser: [chatgpt.com/plugins](https://chatgpt.com/plugins) → **+** → **Add custom MCP server**. Name `Trenz`, URL `https://mcp.trenz.ai/mcp/oauth`, authentication **OAuth**, then **Create as a plugin** and **Allow** on trenz.ai. Which ChatGPT plans can add custom MCP servers is decided by OpenAI; see [Connect ChatGPT](https://mcp.trenz.ai/connect/chatgpt?utm_source=github).
+On chatgpt.com in a browser: [chatgpt.com/plugins](https://chatgpt.com/plugins) → **+** → **Add custom MCP server**. Name `Trenz`, URL `https://mcp.trenz.ai/mcp/oauth?src=github`, authentication **OAuth**, then **Create as a plugin** and **Allow** on trenz.ai. Which ChatGPT plans can add custom MCP servers is decided by OpenAI; see [Connect ChatGPT](https://mcp.trenz.ai/connect/chatgpt?utm_source=github).
 
 ### Other assistants
 
