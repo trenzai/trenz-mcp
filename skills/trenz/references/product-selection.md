@@ -14,7 +14,7 @@ Goal: start from a category or keyword and produce a shortlist of product candid
 
 Screen with search(entity=products) and page with offset until the pool is large enough. Size the pool to the task: if the user gave a size, use it; if not, choose one that fits the depth of the research and state it in the output. Don't draw conclusions from the first page alone.
 
-When the user explicitly asks for an official ranking, use rankings instead, and pick the ranking, time granularity and filters from the current tool description. Before paging through many results, call `account_info` and plan around the current response; every call counts toward the plan's 7-day Agent allowance. Don't call search results sorted by a field an official ranking.
+When the user explicitly asks for an official ranking, use the product ranking tools instead (`get_top_selling_products`, `get_most_promoted_products`, `get_new_arrival_products`), and pick the ranking, time granularity and filters from the current tool description. Before paging through many results, call `account_info` and plan around the current response; every call counts toward the plan's 7-day Agent allowance. Don't call search results sorted by a field an official ranking.
 
 ```
 search(entity="products", country="us", keyword="portable blender",
@@ -40,7 +40,7 @@ For deep review analysis use AI: `ai_generate(type="review_analysis", params={"p
 
 When analyzing a product's trend:
 
-- Use the sales and GMV metrics and recent trend from get_detail, and the spike value in search results. When the user asks about a specific date or period, use rankings with `date` and `granularity`; a product missing from a ranking is not evidence that it had no sales. If the user asks for an exact date range that the available metrics don't cover, say so instead of estimating.
+- Use the sales and GMV metrics and recent trend from get_detail, and the spike value in search results. When the user asks about a specific date or period, use the product ranking tools with `date` and `granularity`; a product missing from a ranking is not evidence that it had no sales. If the user asks for an exact date range that the available metrics don't cover, say so instead of estimating.
 - When comparing candidates, use the same market, period and metrics. If the user only says "recently", state which period the metrics cover.
 - Distinguish daily values from cumulative values; never add up cumulative values to get a period total. Amounts are in the market's currency; don't compare amounts across currencies.
 - Missing fields, missing data points or null are not zero sales; flag estimates and data gaps. When coverage is thin, state the limitation; don't conclude decline or lack of demand from it.

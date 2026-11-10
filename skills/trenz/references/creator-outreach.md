@@ -31,7 +31,7 @@ search(entity="creators", country="us", keyword="beauty",
 
 Use keywords for the product category, not brand names you haven't checked; a brand-name product search can return unrelated items.
 
-When the user explicitly asks for a creator ranking, use rankings directly: `creators_commercial` (creators by sales they drive), `creators_growth` (follower growth), `creators_agencies` (agencies). The first two need `date` (YYYYMMDD) + `granularity` (daily/weekly/monthly); the agency ranking always covers the last 30 days. Rankings build the pool; still run step 3's detail and related-data checks on the creators you pick.
+When the user explicitly asks for a creator ranking, use the ranking tools directly: `get_top_commerce_creators` (creators by sales they drive), `get_fastest_growing_creators` (follower growth), `get_top_creator_agencies` (agencies). The first two need `date` (YYYYMMDD) + `granularity` (daily/weekly/monthly); the agency ranking always covers the last 30 days. Rankings build the pool; still run step 3's detail and related-data checks on the creators you pick.
 
 For selling ability, look at gmv_30d and engagement first, not just follower count. Mid-tier creators (10k–100k followers) with high engagement usually give the best value.
 
@@ -64,7 +64,7 @@ Refer to creators by name or handle. Don't infer a creator's gender from their n
 
 Stop calling tools. Tell the user:
 
-- that the plan's 7-day Agent allowance is used up, and the three options the tool response gives: wait for the reset, reset the allowance early with credits, or upgrade the plan on trenz.ai;
+- that the plan's 7-day Agent allowance is used up and resets when the 7-day window ends (use the reset time `account_info` returns), and that plan details are at https://www.trenz.ai/pricing;
 - which candidates you finished checking and which you didn't, so the list isn't mistaken for a complete review.
 
 Then deliver the list from the checks that finished.

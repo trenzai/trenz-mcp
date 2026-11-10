@@ -7,7 +7,7 @@ Goal: understand competitors' products, shops and ad strategies, and produce an 
 ### A. Start from a product (the user named a competitor)
 
 1. search(entity="products") to locate it by name and get the id (when the user gave only a name)
-2. get_detail(products, id, country) — price, SKU strategy, sales and GMV metrics (sold_7d, sold_30d, gmv_30d) and the short recent trend it returns. When the user asks about a specific date or period, use rankings with `date` and `granularity`. When the user already has the ID and only wants the trend, start at this step
+2. get_detail(products, id, country) — price, SKU strategy, sales and GMV metrics (sold_7d, sold_30d, gmv_30d) and the short recent trend it returns. When the user asks about a specific date or period, use the product ranking tools (`get_top_selling_products`, `get_most_promoted_products`, `get_new_arrival_products`) with `date` and `granularity`. When the user already has the ID and only wants the trend, start at this step
 3. get_related(products, id, "similar", country) — matrix of similar competitors, to see the price distribution
 4. get_related(products, id, "creators", country) — the competitor's creator network (candidates to win over)
 5. get_related(products, id, "videos", country) — the competitor's best-performing content approach
@@ -22,7 +22,7 @@ When comparing trends, use the same market, period and metrics, and distinguish 
 4. get_related(sellers, id, "creators", country) — the creators the shop works with
 5. get_related(sellers, id, "videos", country) — the shop's content marketing approach
 
-When the user explicitly asks for an official shop ranking, use rankings `sellers_top_selling` (best-selling) or `sellers_most_promoted` (most promoted) to build the pool first; both need `date` (YYYYMMDD) + `granularity` (daily/weekly/monthly). Then take the IDs from the ranking back through the detail chain above. Don't present search results sorted by a field as an official ranking.
+When the user explicitly asks for an official shop ranking, use `get_top_selling_sellers` (best-selling) or `get_most_promoted_sellers` (most promoted) to build the pool first; both need `date` (YYYYMMDD) + `granularity` (daily/weekly/monthly). Then take the IDs from the ranking back through the detail chain above. Don't present search results sorted by a field as an official ranking.
 
 ### C. Start from ads (research ad creatives)
 
