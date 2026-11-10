@@ -5,7 +5,7 @@
 <h1 align="center">Trenz MCP</h1>
 
 <p align="center">
-  Research TikTok Shop products, generate AI content and manage your social accounts from Claude, ChatGPT, Cursor and Codex.
+  Research TikTok Shop products, generate AI content and manage your social accounts from Claude, ChatGPT, Cursor, Codex and Gemini CLI.
 </p>
 
 <p align="center">
@@ -16,7 +16,7 @@
 
 Trenz MCP connects your [trenz.ai](https://www.trenz.ai/?utm_source=github) account to the AI assistant you already use. After you connect, ask the assistant to research TikTok Shop products, generate videos and images, or check your social accounts, and it uses Trenz to do the work.
 
-This repository contains the connection settings, the Claude Code and Cursor plugin manifests, the Trenz skill, and the [`server.json`](server.json) published to the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai.trenz) as `ai.trenz/mcp`. The Trenz MCP server itself is hosted by Trenz; no server code or credentials are stored here.
+This repository contains the connection settings, the Claude Code and Cursor plugin manifests, the Gemini CLI extension manifest, the Trenz skill, and the [`server.json`](server.json) published to the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai.trenz) as `ai.trenz/mcp`. The Trenz MCP server itself is hosted by Trenz; no server code or credentials are stored here.
 
 ## Server URL
 
@@ -76,6 +76,14 @@ codex mcp add trenz --url https://mcp.trenz.ai/mcp/oauth
 ```
 
 A trenz.ai page opens; sign in if asked and click **Allow**. If the browser doesn't open, run `codex mcp login trenz`.
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/trenzai/trenz-mcp
+```
+
+The first time Gemini uses Trenz, a trenz.ai page opens; sign in if asked and click **Allow**. If it doesn't open, run `/mcp auth trenz` in Gemini CLI.
 
 ### Claude (web, desktop, mobile)
 

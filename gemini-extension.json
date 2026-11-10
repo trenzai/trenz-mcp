@@ -1,0 +1,10 @@
+{
+  "name": "trenz",
+  "version": "2.0.0",
+  "description": "TikTok Shop product research, AI content generation and social account management, powered by the Trenz MCP server.",
+  "mcpServers": {
+    "trenz": {
+      "httpUrl": "https://mcp.trenz.ai/mcp/oauth?src=gemini-cli"
+    }
+  }
+}
