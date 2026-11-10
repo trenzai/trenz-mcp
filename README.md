@@ -16,7 +16,7 @@
 
 Trenz MCP connects your [trenz.ai](https://www.trenz.ai/?utm_source=github) account to the AI assistant you already use. After you connect, ask the assistant to research TikTok Shop products, generate videos and images, or check your social accounts, and it uses Trenz to do the work.
 
-This repository contains the connection settings, the Claude Code and Cursor plugin manifests, and the Trenz skill. The Trenz MCP server itself is hosted by Trenz; no server code or credentials are stored here.
+This repository contains the connection settings, the Claude Code and Cursor plugin manifests, the Trenz skill, and the [`server.json`](server.json) published to the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=ai.trenz) as `ai.trenz/mcp`. The Trenz MCP server itself is hosted by Trenz; no server code or credentials are stored here.
 
 ## Server URL
 

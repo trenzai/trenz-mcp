@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.trenz/mcp",
+  "title": "Trenz",
+  "description": "TikTok Shop product research, AI content generation and social account management for sellers.",
+  "version": "1.0.0",
+  "websiteUrl": "https://mcp.trenz.ai",
+  "repository": {
+    "url": "https://github.com/trenzai/trenz-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://mcp.trenz.ai/trenz-icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": ["any"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.trenz.ai/mcp/oauth?src=mcp-registry"
+    }
+  ]
+}
