@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "trenz": {
+      "type": "http",
+      "url": "https://mcp.trenz.ai/mcp/oauth?src=claude-plugin"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "trenz": {
+      "url": "https://mcp.trenz.ai/mcp/oauth?src=cursor-plugin"
+    }
+  }
+}

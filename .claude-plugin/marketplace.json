@@ -1,0 +1,17 @@
+{
+  "name": "trenz",
+  "owner": {
+    "name": "Trenz",
+    "url": "https://www.trenz.ai"
+  },
+  "metadata": {
+    "description": "Trenz plugin for Claude Code: the Trenz MCP server plus the Trenz skill for TikTok Shop sellers."
+  },
+  "plugins": [
+    {
+      "name": "trenz",
+      "source": "./",
+      "description": "TikTok Shop product research, AI content generation and social account management for your AI assistant, powered by the Trenz MCP server."
+    }
+  ]
+}

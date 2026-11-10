@@ -1,0 +1,13 @@
+{
+  "name": "trenz",
+  "version": "1.2.0",
+  "description": "TikTok Shop product research, AI content generation and social account management for your AI assistant, powered by the Trenz MCP server.",
+  "author": {
+    "name": "Trenz",
+    "url": "https://www.trenz.ai"
+  },
+  "homepage": "https://mcp.trenz.ai",
+  "repository": "https://github.com/trenzai/trenz-mcp",
+  "license": "MIT",
+  "keywords": ["tiktok-shop", "ecommerce", "product-research", "creator-marketing", "social-media", "mcp"]
+}
