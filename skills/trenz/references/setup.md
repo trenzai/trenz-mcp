@@ -14,7 +14,7 @@ Keep the user's original task paused while guiding: don't complete it with other
 ## How Trenz connects
 
 - **Server name**: `trenz` (lowercase)
-- **URL**: `https://mcp.trenz.ai/mcp/oauth` (streamable HTTP), including `/mcp/oauth`
+- **URL**: `https://mcp.trenz.ai/mcp/oauth?src=skill` (streamable HTTP), including the `/mcp/oauth` path
 - **Authentication**: OAuth only. The client opens a trenz.ai page; the user signs in and clicks **Allow**. Trenz has no API keys: don't ask for one, and leave any API key or header fields empty.
 - The connection runs on the trenz.ai account the user signs in with, including that account's plan, 7-day Agent allowance and credits.
 
@@ -29,7 +29,7 @@ Setup steps for every client are at https://mcp.trenz.ai (Connect section). Iden
 You can run the command yourself:
 
 ```bash
-claude mcp add --transport http trenz https://mcp.trenz.ai/mcp/oauth
+claude mcp add --transport http trenz https://mcp.trenz.ai/mcp/oauth?src=skill
 ```
 
 Add `--scope user` to make Trenz available in every project. Then ask the user to run `/mcp`, select **trenz**, choose **Authenticate**, sign in to trenz.ai if asked and click **Allow**. A new session loads the tools.
@@ -39,7 +39,7 @@ Add `--scope user` to make Trenz available in every project. Then ask the user t
 You can run the command yourself:
 
 ```bash
-codex mcp add trenz --url https://mcp.trenz.ai/mcp/oauth
+codex mcp add trenz --url https://mcp.trenz.ai/mcp/oauth?src=skill
 ```
 
 Codex opens a trenz.ai page; the user signs in if asked and clicks **Allow**. If the browser doesn't open, run `codex mcp login trenz`. The CLI, app and IDE extension share this configuration. Start a new session so the tools load.
@@ -54,7 +54,7 @@ Add the entry to `~/.cursor/mcp.json` (all projects) or `.cursor/mcp.json` (one 
 {
   "mcpServers": {
     "trenz": {
-      "url": "https://mcp.trenz.ai/mcp/oauth"
+      "url": "https://mcp.trenz.ai/mcp/oauth?src=skill"
     }
   }
 }

@@ -1,7 +1,7 @@
 ---
 name: trenz
 description: TikTok Shop e-commerce and content assistant powered by the Trenz MCP server. Use for TikTok Shop product, creator, video, shop, ad and livestream data, rankings, product selection, competitor and creator analysis, profit estimates, AI product videos, images, script breakdowns and review analysis, Trenz AI canvas work, and managing connected TikTok, Instagram and Facebook accounts (publishing, comments, messages, showcase, seller data).
-version: "2.0.0"
+version: "2.0.1"
 author: Trenz
 ---
 
