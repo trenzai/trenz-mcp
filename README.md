@@ -5,7 +5,7 @@
 <h1 align="center">Trenz MCP</h1>
 
 <p align="center">
-  Research TikTok Shop products, generate AI content and manage your social accounts from Claude, ChatGPT, Cursor, Codex and Gemini CLI.
+  Research TikTok Shop products, generate AI content and manage your social accounts from Codex, Claude, ChatGPT, Cursor and Gemini CLI.
 </p>
 
 <p align="center">
@@ -33,6 +33,20 @@ Remote MCP over streamable HTTP. You sign in with your trenz.ai account the firs
 - **Social accounts**: check performance, publish posts, reply to comments and messages, and read your TikTok Shop seller reports.
 
 ## Connect
+
+### Codex
+
+Codex comes with every ChatGPT plan, including Free, Go and Plus, and can use all Trenz tools.
+
+In the Codex app: **Plugins** → **Manage** → **MCPs** → **Add** → **Add MCP server**. Name `trenz`, type **Streamable HTTP**, URL `https://mcp.trenz.ai/mcp/oauth?src=github`, click **Save**, then **Authenticate** and **Allow** on trenz.ai.
+
+In the Codex CLI or IDE extension:
+
+```bash
+codex mcp add trenz --url https://mcp.trenz.ai/mcp/oauth?src=github
+```
+
+A trenz.ai page opens; sign in if asked and click **Allow**. If the browser doesn't open, run `codex mcp login trenz`.
 
 ### Claude Code
 
@@ -69,14 +83,6 @@ Or add this to `~/.cursor/mcp.json` (merge it with any servers already there):
 
 Then open **Cursor Settings** → **MCP**, click **Login** next to trenz, sign in to trenz.ai if asked and click **Allow**.
 
-### Codex
-
-```bash
-codex mcp add trenz --url https://mcp.trenz.ai/mcp/oauth?src=github
-```
-
-A trenz.ai page opens; sign in if asked and click **Allow**. If the browser doesn't open, run `codex mcp login trenz`.
-
 ### Gemini CLI
 
 ```bash
@@ -91,7 +97,7 @@ The first time Gemini uses Trenz, a trenz.ai page opens; sign in if asked and cl
 
 ### ChatGPT
 
-On chatgpt.com in a browser: [chatgpt.com/plugins](https://chatgpt.com/plugins) → **+** → **Add custom MCP server**. Name `Trenz`, URL `https://mcp.trenz.ai/mcp/oauth?src=github`, authentication **OAuth**, then **Create as a plugin** and **Allow** on trenz.ai. Which ChatGPT plans can add custom MCP servers is decided by OpenAI; see [Connect ChatGPT](https://mcp.trenz.ai/connect/chatgpt?utm_source=github).
+On chatgpt.com in a browser: [chatgpt.com/plugins](https://chatgpt.com/plugins) → **+** → **Add custom MCP server**. Name `Trenz`, URL `https://mcp.trenz.ai/mcp/oauth?src=github`, authentication **OAuth**, then **Create as a plugin** and **Allow** on trenz.ai. Which ChatGPT plans can add custom MCP servers is decided by OpenAI; see [Connect ChatGPT](https://mcp.trenz.ai/connect/chatgpt?utm_source=github). On Free, Go and Plus, use [Codex](#codex) instead.
 
 ### Other assistants
 
